@@ -35,7 +35,7 @@ def newton(fun,grad,x0,tol=1e-6,maxiter=100,callback=None):
         x0 = x1
     else:
         raise RuntimeError('Failed to converge in %d iterations'%maxiter)
-    return (x0+x1)/2
+    return x1
 
 
 def solve_sa(F,x0,tol=1e-6,maxiter=100,callback=None):
@@ -71,7 +71,7 @@ def newton2(fun,grad,x0,tol=1e-6,maxiter=100,callback=None):
         x0 = x1
     else:
         raise RuntimeError('Failed to converge in %d iterations'%maxiter)
-    return (x0+x1)/2
+    return x1
     
 
 # def grid_search(fun,bounds=(0,1),ngrid=10):
